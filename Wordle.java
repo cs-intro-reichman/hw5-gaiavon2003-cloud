@@ -70,7 +70,7 @@ public class Wordle {
     // Prints the game board up to currentRow (inclusive).
     public static void printBoard(char[][] guesses, char[][] results, int currentRow) {
         System.out.println("Current board:");
-        for (int row = 0; row <= currentRow; row++) {
+        for (int row = 0; row < currentRow; row++) {
             System.out.print("Guess " + (row + 1) + ": ");
             for (int col = 0; col < guesses[row].length; col++) {
                 System.out.print(guesses[row][col]);
