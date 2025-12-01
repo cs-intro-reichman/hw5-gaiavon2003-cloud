@@ -138,9 +138,10 @@ public class Wordle {
             // ... use storeGuess and computeFeedback
 
             // Print board
-            printBoard(guesses, results, attempt);
+            
             storeGuess(guess, guesses, attempt);
             computeFeedback(secret, guess, results[attempt]);
+            printBoard(guesses, results, attempt+1);
 
             // Check win
             if (isAllGreen(results[attempt])) {
@@ -148,8 +149,7 @@ public class Wordle {
                 won = true;
                 break;
             }
-
-            attempt++;
+                attempt++;
         }
 
         if (!won) {
